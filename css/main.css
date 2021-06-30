@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+/* Global Rules */
+:root {
+  --font: "Quicksand", sans-serif;
+  --main-color: #ea2027;
+  --dark-color: #1e272e;
+  --dm-font: "Lobster", cursive;
+  --transition: 0.5s all;
+}
+
+body {
+  font-family: var(--font) !important;
+  color: var(--dark-color);
+  background-color: #eaeaea;
+}
+
+input,
+button,
+select,
+text-area {
+  box-shadow: none !important;
+}
+
+.title-border {
+  background-color: #eaeaea !important;
+  height: 5px;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.star-rating i {
+  color: #ffc000;
+}
+.btn-search {
+  background-color: var(--main-color);
+  color: white;
+}
+.btn-search:hover {
+  background-color: var(--dark-color);
+  color: white;
+}
+/* Cards */
+.card-bg {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+}
+.card-bg:hover {
+  background-color: var(--dark-color);
+  color: white;
+}
+/* Navbar */
+.navbar .navbar-brand {
+  color: var(--main-color);
+  font-family: var(--dm-font);
+}
+.navbar .navbar-brand:hover {
+  color: var(--main-color);
+}
+.navbar .navbar-toggler {
+  border: none !important;
+}
+.navbar .navbar-nav input[type="search"] {
+  width: 200px;
+  transition: var(--transition);
+}
+.navbar .navbar-nav input[type="search"]:focus {
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-nav input[type="search"]:focus {
+    width: auto;
+  }
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: var(--dark-color);
+  font-weight: bold !important;
+  transition: 0.5s;
+  padding: 10px 10px 10px 10px;
+}
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: var(--main-color);
+  padding-right: 15px;
+}
+.navbar .navbar-nav .nav-item .nav-link:focus {
+  color: var(--main-color);
+  padding-right: 15px;
+}
+.navbar .navbar-nav .dropdown .dropdown-item {
+  font-weight: bold;
+}
+.navbar .navbar-nav .dropdown .dropdown-item:hover {
+  background-color: var(--main-color);
+  color: white !important;
+}
+.navbar .navbar-nav .goto {
+  background-color: var(--main-color);
+  color: white !important;
+  border-radius: 5px;
+  text-align: center !important;
+}
+.navbar .navbar-nav .goto:hover {
+  background-color: var(--dark-color);
+}
+/* Showcase */
+.showcase {
+  background-image: url("../img/showcase.jpg");
+  background-size: cover;
+}
+.showcase .showcase-opacity {
+  background-color: #1e272ed0;
+}
+.showcase .showcase-btn,
+.showcase .search-btn {
+  background-color: var(--main-color);
+  color: white;
+}
+.showcase .showcase-btn:hover,
+.showcase .search-btn:hover {
+  color: white;
+  background-color: var(--dark-color);
+}
+
+/* Categories */
+.shopping h1,
+.youtubers h1,
+.business h1 {
+  color: var(--main-color);
+}
+.shopping h5,
+.youtubers h5,
+.business h5 {
+  color: var(--main-color);
+}
+
+/* Products Cards */
+.product-cards-box {
+  border: solid 2px #ddd;
+  border-radius: 5px;
+}
+.grid-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr !important;
+}
+@media (max-width: 768px) {
+  .grid-columns {
+    grid-template-columns: 1fr !important;
+  }
+}
+.product-cards-box h4 {
+  color: var(--main-color);
+}
+.product-cards-box img {
+  border-radius: 20px !important;
+  transition: var(--transition);
+}
+.product-cards-box:nth-child(5) img,
+.product-cards-box:nth-child(6) img,
+.product-cards-box:nth-child(7) img,
+.product-cards-box:nth-child(8) img {
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .product-cards-box:nth-child(5) img,
+  .product-cards-box:nth-child(6) img,
+  .product-cards-box:nth-child(7) img,
+  .product-cards-box:nth-child(8) img {
+    height: auto;
+  }
+}
+.product-cards-box img:hover {
+  transform: scale(90%);
+  filter: grayscale(80%);
+}
+.product-cards-box .box-btn {
+  background-color: var(--main-color);
+  color: white !important;
+  text-align: center !important;
+}
+.product-cards-box .box-btn:hover {
+  background-color: var(--dark-color);
+}
+
+/* Companies */
+.companies {
+  background-color: #fff;
+}
+.companies img {
+  width: 70%;
+  filter: grayscale(100%);
+  transition: var(--transition);
+}
+.companies img:hover {
+  filter: grayscale(0);
+}
+
+/* Compare */
+.compare-btn {
+  background-color: var(--main-color);
+  color: white !important;
+}
+.compare-btn:hover {
+  background-color: var(--dark-color);
+}
+.trending-products a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.trending-products a:hover {
+  text-decoration: underline !important;
+}
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+}
+footer .footer-brand {
+  text-decoration: none;
+  color: var(--main-color) !important;
+}
+footer .second .nav-item .nav-link {
+  padding: 10px !important;
+  border: none !important;
+  color: white;
+  font-weight: bold;
+  font-size: 12px !important;
+}
+footer .second .nav-item:hover .nav-link {
+  background-color: transparent;
+  color: var(--main-color);
+}
